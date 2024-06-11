@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SHOW</title>
+        <link rel="stylesheet" href="/static/assets/css/show.css">
+    </head>
+<body>
+    <section>
+    <div class="container">
+
+        <div class="tab_box">
+            <button class="tab_btn">Download O/P</button>
+            <button class="tab_btn">Real Time Predict</button>
+            <button class="tab_btn">Fill CSV</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content">
+                <h2>Download O/P</h2>
+                <p>
+                   Here You can download your predicted output of the
+                    given CSV file by passing value to it
+                </p>
+                <a href="#" download="model.pkl"><button class="button" d>Download</button></a>
+
+            </div>
+
+            <div class="content">
+                <h2>Real Time Predict</h2>
+                <p>
+                   By giving the real time value to the attribute
+                   you can predict real time output
+                </p>
+                <a href="/imageClassificationUpload"><button class="button">Predict</button></a>
+
+            </div>
+
+            <div class="content">
+                <h2>Fill CSV</h2>
+                <p>
+                    Here your prediction and input data to be converted
+                    to csv file format you can directly get it
+                </p>
+                <button class="button">Get CSV</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        const tabs= document.querySelectorAll('.tab_btn');
+        const all_content= document.querySelectorAll('.content');
+
+       tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', (e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+
+            var line = document.querySelector('.line');
+            line.style.width=e.target.offsetWidth + "px";
+
+            // Calculate the position relative to the container
+            var containerOffset = e.target.parentNode.offsetLeft;
+            line.style.left=e.target.offsetLeft + "px";
+
+            all_content.forEach(content=>{content.classList.remove('active')});
+            all_content[index].classList.add('active');
+            })
+        })
+    </script>
+
+</body>
+
+</html>

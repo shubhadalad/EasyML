@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Visualization Results</title>
+  <link href="/static/assets/css/Visualization.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Data Visualization Results</h1>
+    <div class="image-container">
+        <div class="image-box">
+             <h2>Histogram plot</h2>
+            <img src="{{ plot_url }}" alt="Histogram">
+        </div>
+        <div class="image-box">
+            <h2>Bar Plot</h2>
+    <img src="{{ bar_url }}" alt="Bar Plot">
+        </div>
+        <div class="image-box">
+            <h2>Box Plot</h2>
+    <img src="{{ box_url }}" alt="Box Plot">
+        </div>
+        <div class="image-box">
+            <h2>Heatmap</h2>
+    <img src="{{ heatmap_url }}" alt="Heatmap">
+        </div>
+         <div class="image-box">
+            <h2>Scatter Plot</h2>
+    <img src="{{ scatter_url }}" alt="Scatter Plot">
+        </div>
+    </div>
+</div>
+</body>
+</html>

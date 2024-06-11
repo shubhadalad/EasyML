@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Linear Regression</title>
+</head>
+<body>
+    <h1>EasyML</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if features %}
+    <p style="color: red;">{{ features }}</p>
+{% endif %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file">Upload CSV File:</label>
+        <input type="file" name="file" id="file" accept=".csv">
+      
+        <select id="featureDropdown" name="selectedFeature">
+            {% for feature in features %}
+                <option value="{{ feature }}">{{ feature }}</option>
+            {% endfor %}
+        </select>
+       
+        <br> 
+        <br> 
+        <input type="submit" value="Submit">
+    </form> 
+    <script>
+       /* document.getElementById('upload-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            
+            var form = e.target;
+            var formData = new FormData(form);
+
+            // Handle submission via AJAX to send the file and form data to Flask
+            fetch('/process', {
+                method: 'POST',
+                body: formData,
+            }).then(response => response.text())
+            .then(data => {
+                console.log(data); // Handle the response as needed
+            });
+        }); */
+        document.getElementById('file').addEventListener('change', handleFile);
+        function handleFile() {
+            const fileInput = document.getElementById('file');
+            const featureDropdown = document.getElementById('featureDropdown');
+            featureDropdown.innerHTML = ''; // Clear previous options
+
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const csv = e.target.result;
+                    const lines = csv.split('\n');
+                    if (lines.length > 0) {
+                        const headers = lines[0].split(',');
+                        for (let header of headers) {
+                            const option = document.createElement('option');
+                            option.text = header.trim();
+                            featureDropdown.add(option);
+                        }
+                    }
+                };
+                reader.readAsText(file);
+            }
+        }
+    </script>
+   
+    
+</body>
+</html>

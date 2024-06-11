@@ -1,0 +1,14 @@
+Flask
+Gunicorn
+sklearn
+matplotlib
+tensorflow
+keras
+Pillow
+seaborn
+pandas
+numpy
+
+
+
+

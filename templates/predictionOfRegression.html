@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="\static\assets\css\predictionOfRegression.css"> 
+        <title>SHOW</title>
+    </head>
+
+<body>
+    <h1>Simple Linear Regression - Prediction</h1>
+   
+    <div class="col-2"> 
+        <form method="POST">
+            <center>
+                <div class="form-container">
+                    {% for label in list %}
+                    <div class="form-row">
+                        <label for="input{{ loop.index }}">{{ label }}:</label>
+                        <input type="number" name="{{ label }}" id="{{ label }}" step="any" required>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="button">
+                    <input type="submit" value="Predict" id="button">
+                </div>
+            </center>
+        </form>
+
+        <!-- <img src="data:image/png;base64,{{ plot }}" alt="Prediction Plot"> -->
+        <style>
+            {% if y_pred is defined %}
+            #button {
+                display: none;
+            }
+        </style>
+        <h2>Prediction is</h2>
+        <h3><p>Predicted Output: {{ y_pred }}</p></div></h3>
+        {% endif %}
+    </div>
+</body>
+</html>

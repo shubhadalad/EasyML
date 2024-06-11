@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="\static\assets\css\predictionOfRegression.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>SHOW</title>
+    </head>
+
+<body>
+    <h1>Classification  - Prediction</h1>
+    <h2>{{error}}</h2>
+    <div class="col-2">
+       <form action="/imageClassificationPrediction" method="post" enctype="multipart/form-data">
+           <div class="form-group">
+                        <label for="file">Upload image:
+                        <input type="file" name="file" accept="image/*" onchange="showImagePreview(event)"></label>
+           </div>
+
+        <br><br>
+        <input type="submit" value="Classify" id="button">
+    </form>
+      <div id="image-preview-container" style="display: none;">
+          <img id="image-preview" class="image-preview" src="#" alt="Image Preview">
+      </div>
+        <!-- <img src="data:image/png;base64,{{ plot }}" alt="Prediction Plot"> -->
+
+    </div>
+
+    <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function showImagePreview(event) {
+      console.log('showImagePreview triggered'); // Debugging line
+      const input = event.target;
+      const previewContainer = document.getElementById('image-preview-container');
+      const previewImage = document.getElementById('image-preview');
+
+      if (input.files && input.files[0]) {
+        console.log('File selected: ', input.files[0].name); // Debugging line
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+          previewContainer.style.display = 'block';
+          console.log('Image preview updated'); // Debugging line
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        console.log('No file selected'); // Debugging line
+        previewContainer.style.display = 'none';
+        previewImage.src = '#';
+      }
+    }
+  </script>
+</body>
+
+</html>
+

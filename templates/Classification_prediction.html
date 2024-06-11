@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="\static\assets\css\predictionOfRegression.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>SHOW</title>
+    </head>
+
+<body>
+    <h1>Classification  - Prediction</h1>
+
+    <div class="col-2">
+       <form method="POST" action="/ClassificationInputs">
+    <center>
+        <div class="form-container">
+            <!-- Loop through feature names and include them in the form -->
+            {% for feature, data_type in input_features.items() %}
+                <div class="form-row">
+                    <input type="hidden" name="feature_names[]" value="{{ feature }}">
+                    <label for="{{ feature }}">{{ feature }}:</label>
+                    {% if data_type == 'Numeric' %}
+                        <input type="number" name="{{ feature }}" id="{{ feature }}" step="any" required>
+                    {% else %}
+                        <select name="{{ feature }}" id="{{ feature }}" required>
+                            {% for value in data_type %}
+                                <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="button">
+            <input type="submit" value="Predict" id="button">
+        </div>
+    </center>
+</form>
+
+
+        <!-- <img src="data:image/png;base64,{{ plot }}" alt="Prediction Plot"> -->
+        <style>
+            {% if y_pred is defined %}
+            #butto,form {
+                display: none;
+            }
+        </style>
+        <h2>Prediction is</h2>
+        <h3><p>Predicted Output: {{ y_pred }}</p></h3></div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
+

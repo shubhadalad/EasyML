@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="\static\assets\css\predictionOfRegression.css">
+        <title>SHOW</title>
+    </head>
+
+<body>
+    <h1>Image Classification - Prediction</h1>
+
+    <div class="col-2">
+        <!-- <img src="data:image/png;base64,{{ plot }}" alt="Prediction Plot"> -->
+        <style>
+            {% if output_class is defined %}
+            #button {
+                display: none;
+            }
+        </style>
+        <h2>Prediction is</h2>
+        <h3><p>Predicted Output: {{ output_class }}</p></div></h3>
+        {% endif %}
+    </div>
+</body>
+</html>
+
