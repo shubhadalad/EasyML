@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-image: linear-gradient(557deg, rgba(237, 237, 237, 0.05) 0%, rgba(237, 237, 237, 0.05) 31%,rgba(6, 6, 6, 0.05) 31%, rgba(6, 6, 6, 0.05) 100%),linear-gradient(310deg, rgba(45, 45, 45, 0.05) 0%, rgba(45, 45, 45, 0.05) 72%,rgba(247, 247, 247, 0.05) 72%, rgba(247, 247, 247, 0.05) 100%),linear-gradient(534deg, rgba(248, 248, 248, 0.05) 0%, rgba(248, 248, 248, 0.05) 24%,rgba(29, 29, 29, 0.05) 24%, rgba(29, 29, 29, 0.05) 100%),linear-gradient(389deg, rgb(54, 254, 89),rgb(71, 192, 12));  
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.col-2 {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  text-align: center;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  margin-bottom: 15px;
+  width: calc(33.33% - 10px); /* Three items per row with some space between them */
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block; /* Ensures items stay inline */
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+select{
+ width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+}
+
+.button {
+  text-align: center;
+}
+
+#button {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#button:hover {
+  background-color: green;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+h3 {
+  text-align: center;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+
+/* To create a three-column layout, adjust for better responsiveness */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .form-row {
+      width: 100%; /* Display items in a single column for smaller screens */
+  }
+}
+
+ #image-preview-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #image-preview {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }

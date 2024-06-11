@@ -1,0 +1,31 @@
+* {
+    margin: 100;
+    padding: 100;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 30vh;
+    width: 100%;
+    font-size: 16px;
+    background: url(images/photo.jpg) top center no-repeat;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.body-container {
+    position: relative;
+}
+

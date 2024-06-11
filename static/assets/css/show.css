@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+  background-image: linear-gradient(557deg, rgba(237, 237, 237, 0.05) 0%, rgba(237, 237, 237, 0.05) 31%,rgba(6, 6, 6, 0.05) 31%, rgba(6, 6, 6, 0.05) 100%),linear-gradient(310deg, rgba(45, 45, 45, 0.05) 0%, rgba(45, 45, 45, 0.05) 72%,rgba(247, 247, 247, 0.05) 72%, rgba(247, 247, 247, 0.05) 100%),linear-gradient(534deg, rgba(248, 248, 248, 0.05) 0%, rgba(248, 248, 248, 0.05) 24%,rgba(29, 29, 29, 0.05) 24%, rgba(29, 29, 29, 0.05) 100%),linear-gradient(389deg, rgb(54, 254, 89),rgb(71, 192, 12));  
+  justify-content: center;
+  padding: 50px;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+    width: 600px;
+    margin: 0 auto;
+}
+/*.section{
+    width: 0%;
+    margin: 6.5rem auto 0;
+}*/
+.tab_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px solid rgba(229,229,229);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px; /* Added margin for better spacing */
+}
+.tab_box  .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    background: none;
+    border:none;
+    padding: 18px;
+    cursor: pointer;
+}
+.tab_box .tab_btn .active{
+    color: green;
+}
+
+.line{
+    position: absolute;
+    /*top: 62px;*/
+    bottom: -5px;
+    left: 0px;
+    width: 200px;
+    height: 5px;
+    background-color: green;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.content_box{
+    padding: 20px;
+}
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+
+.button{
+    color: green;
+    border: 3px solid #fff;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(53, 214, 61),
+    0 0 25px rgb(53, 214, 61);
+}
+.button:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan; 
+}
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+.content_box .content.active{
+    display: block;
+}
+
+.content_box .content h2{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

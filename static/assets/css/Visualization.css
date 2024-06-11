@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40; /* Dark gray text color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6c757d; /* Medium gray text color */
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+
+.container
+{
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+
+label
+{
+    background-color: #0f9015;
+    padding: 1rem;
+    border-radius: 3px;
+    color: black;
+}
+
+label:hover
+{
+    color:#fff;
+    background-color:#0f9015;
+    box-shadow: 0 0 5px rgba(1, 225, 1, 0.952),
+    0 0 25px #0f9015;
+}
+
+#file
+{
+    width:5rem;
+    overflow:hidden;
+    display: none;
+}
+.form-group label
+{
+    color: #111a12;
+    margin: 15px 0 0 0;
+    font-size: 30px;
+}
+
+.form-control-file {
+    padding: 20px;
+
+}
+
+.form-control-file {
+    background-color: #adbaae;
+    border-radius: 5px;
+
+}
+.form-group label{
+    color:#fff;
+    font-weight: 700;
+}
+
+::-webkit-file-upload-button
+{
+    color:#015f06;
+    background: #d3e4d4;
+    padding:10px;
+    border:none;
+    border-radius:40px;
+    box-shadow: 1px 0 1px 1px #38d33f;
+    outline: none;
+    word-spacing: 1px;
+}
+
+::-webkit-file-upload-button:hover
+{
+    background: #015f06;
+    color:#fff;
+}
+form
+{
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 2px solid #015f06;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px;
+    background-color: #adbaae;
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #38d33f;
+    box-shadow: 0 0 5px rgba(25, 114, 3, 0.5);
+}
+
+#featureDropdown {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+#featureDropdown option {
+    padding: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#featureDropdown option:hover {
+    background-color: #08ee13;
+}
+
+.btn
+{
+    padding: 15px 40px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #015f06;
+    box-shadow: 0px 5px 30px #5c8b65;
+    width: 10rem;
+
+}
+
+.btn:hover
+{
+    background-color: #0f9015;
+}
+background-color: #007bff; /* Blue button color */
+    color: #fff; /* White button text color */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between images */
+    justify-items: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items vertically */
+    margin-top: 20px;
+}
+
+.image-box {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Allow images to adjust height accordingly */
+}
+
+.image-box img {
+    width: 100%; /* Ensure images fill the available space */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+    border-radius: 5px; /* Add border radius for a rounded appearance */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+
+/* Add more styles as needed */
